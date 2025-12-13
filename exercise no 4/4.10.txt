@@ -1,0 +1,13 @@
+4.10 What's wrong with the while statement?
+Given code:
+while (z >= 0)
+    sum += z;
+Error:
+The value of z never changes, so the condition z >= 0 will always be true.
+This causes an infinite loop.
+Correct code (example):
+while (z >= 0)
+{
+    sum += z;
+    --z;
+}

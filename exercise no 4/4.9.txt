@@ -1,0 +1,53 @@
+4.9 Identify and correct the errors
+a)Given code:
+while (c <= 5)
+{
+    product *= c;
+    ++C;
+}
+
+Error:
+Variable C is incremented, but the loop condition uses c.
+C++ is case-sensitive, so C and c are different variables.
+Correct code:
+while (c <= 5)
+{
+    product *= c;
+    ++c;
+}
+correct program:
+#include<iostream>
+using namespace std;
+int main()
+{
+	int c=1;
+	int product;
+	while (c <= 5)
+{
+    product *= c;
+    cout<<product;
+    ++c;
+}
+return 0;
+}
+output:
+12624120
+b)Given code:
+cin << value;
+Error:
+cin uses the extraction operator (>>), not <<.
+Correct code:
+cin >> value;
+c)Given code:
+if (gender == 1)
+    cout << "Woman" << endl;
+else;
+    cout << "Man" << endl;
+Error:
+There is a semicolon after else, which ends the else statement.
+As a result, "Man" is printed every time, regardless of the condition.
+Correct code:
+if (gender == 1)
+    cout << "Woman" << endl;
+else
+    cout << "Man" << endl;
